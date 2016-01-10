@@ -90,20 +90,7 @@ class Indexer(object):
 		# 将 Dic 对象持久化
 		mydb = open('wiki-postings', 'w')
 		pickle.dump(word_dictionary, mydb)
-
-	def retrive_word(self, word):
-		mydb = open('wiki-postings', 'r')
-		word_dictionary = pickle.load(mydb)
-		# print word_dictionary[word]
-
-		# 找出 DocID 对应的 url
-		manager = documentManager()
-		collection = manager.connect_mongo()
-
-		for word in word_dictionary[word]:
-			url = collection.find_one({"DocID": int(word[0])})["url"]
-			print url
-
+		
 
 if __name__ == '__main__':
 	indexer = Indexer()
@@ -113,7 +100,4 @@ if __name__ == '__main__':
 	# indexer.sort_index()
 
 	# 构建倒排索引
-	# indexer.make_dictionnary()
-
-	# 进行搜索
-	indexer.retrive_word('the')	
+	# indexer.make_dictionnary()	
