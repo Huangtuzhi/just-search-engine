@@ -42,4 +42,6 @@ mongod --dbpath =/opt/mongodb-data --logpath=/opt/mongodb-data/mongodb.log
 
 [自制搜索引擎](http://book.douban.com/subject/26681675/)
 
+[http://fuzhii.com/2016/01/08/develop-search-engine/](http://fuzhii.com/2016/01/08/develop-search-engine/)
+
 
