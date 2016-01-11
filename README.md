@@ -4,6 +4,15 @@
 
 ## 目录结构
 
+搜索引擎由下列 4 个组件构成。
+
+* 文档管理器(Document Manager)
+* 索引构建器(Indexer)
+* 索引管理器(Index Manager)
+* 索引检索器(Index Searcher)
+
+对应地，在项目结构中
+
 ```
 ├── just-search-engine
 │   ├── documentManager.py # 文档管理器
